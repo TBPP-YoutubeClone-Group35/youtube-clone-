@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Navbar from "./Components/Navbar/Navbar"
-import Sidebar from "./Components/Sidebar/Sidebar" 
+import Sidebar from "./Components/Sidebar/Sidebar"
+import VideoSection from "./Components/VideoSection/VideoSection"
 import "./App.css"
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <div className="container">
         <Sidebar isExpanded={isSidebarExpanded} />
         <main className={`main-content ${isSidebarExpanded ? "sidebar-expanded" : ""}`}>
-          {/* Your content will go here */}
+          <VideoSection />
         </main>
       </div>
     </div>

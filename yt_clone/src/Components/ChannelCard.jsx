@@ -1,7 +1,7 @@
 import React from React;
 
-const channelCard = () => {
+const ChannelCard = () => {
     return <div classname="App"></div>
 }
 
-export default channelCard;
+export default ChannelCard;
