@@ -61,16 +61,16 @@
   margin-right: 24px;
 }
 
-/* Active and Hover States */
-.menuItem:hover {
+
+/* .menuItem:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
+} */
 
 .menuItem.active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Menu Header */
+
 .menuHeader {
   display: flex;
   align-items: center;
