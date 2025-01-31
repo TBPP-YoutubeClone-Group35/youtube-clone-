@@ -1,18 +1,18 @@
-import React, { useState } from "react"
-import Navbar from "./Components/Navbar/Navbar"
-import Sidebar from "./Components/Sidebar/Sidebar"
-import VideoSection from "./Components/VideoSection/VideoSection"
-import Login from "./Components/login-signup/login"
-import Signup from "./Components/login-signup/signup"
-
-import "./App.css"
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar/Navbar";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import VideoSection from "./Components/VideoSection/VideoSection";
+import Login from "./Components/login-signup/login";
+import Signup from "./Components/login-signup/signup";
+import "./App.css";
 
 function App() {
-  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false)
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
 
   const toggleSidebar = () => {
-    setIsSidebarExpanded(!isSidebarExpanded)
-  }
+    setIsSidebarExpanded(!isSidebarExpanded);
+  };
 
   return (
     <div className="App">
@@ -20,11 +20,15 @@ function App() {
       <div className="container">
         <Sidebar isExpanded={isSidebarExpanded} />
         <main className={`main-content ${isSidebarExpanded ? "sidebar-expanded" : ""}`}>
-          <VideoSection />
+          <Routes>
+            <Route path="/" element={<VideoSection />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+          </Routes>
         </main>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

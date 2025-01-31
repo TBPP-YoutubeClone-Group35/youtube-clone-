@@ -25,7 +25,7 @@
   padding: 8px 0;
 }
 
-/* Menu Item Styles */
+
 .menuItem {
   display: flex;
   align-items: center;
@@ -36,7 +36,6 @@
   position: relative;
 }
 
-/* Collapsed State */
 .sidebar:not(.expanded) .menuItem {
   flex-direction: column;
   height: 74px;
@@ -49,7 +48,7 @@
   margin: 0 0 6px 0;
 }
 
-/* Expanded State */
+
 .sidebar.expanded .menuItem {
   flex-direction: row;
   height: 40px;
@@ -87,7 +86,7 @@
   height: 16px;
 }
 
-/* Channel Icon */
+
 .channelIcon {
   width: 24px;
   height: 24px;
@@ -103,28 +102,28 @@
   object-fit: cover;
 }
 
-/* Dot Separator */
+
 .dot {
   color: #aaa;
   margin-left: 4px;
   font-size: 9px;
 }
 
-/* Text Styles */
+
 .menuItem span {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-/* Icons */
+
 .menuItem svg {
   min-width: 24px;
   height: 24px;
   color: #f1f1f1;
 }
 
-/* Scrollbar Styles */
+
 .sidebar::-webkit-scrollbar {
   width: 8px;
 }
@@ -142,12 +141,12 @@
   background-color: #717171;
 }
 
-/* Section Spacing */
+
 .section + .section {
   margin-top: 0;
 }
 
-/* Menu Item Text */
+
 .menuItem span {
   color: #f1f1f1;
   font-family: "Roboto", "Arial", sans-serif;
