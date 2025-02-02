@@ -16,17 +16,19 @@ function App() {
 
   return (
     <div className="App">
+      <Routes>
+            <Route path="/" element={<VideoSection />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+         </Routes>
       <Navbar onMenuClick={toggleSidebar} />
       <div className="container">
         <Sidebar isExpanded={isSidebarExpanded} />
         <main className={`main-content ${isSidebarExpanded ? "sidebar-expanded" : ""}`}>
-          <Routes>
-            <Route path="/" element={<VideoSection />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<Signup />} />
-          </Routes>
+          
         </main>
       </div>
+      
     </div>
   );
 }

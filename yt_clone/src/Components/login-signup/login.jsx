@@ -16,7 +16,7 @@ const Login = () => {
       return;
     }
 
-    if (email === "user@example.com" && password === "password") {
+    if (email === "yash@gmail.com" && password === "password") {
       navigate("/dashboard"); 
     } else {
       setError("Invalid email or password");
