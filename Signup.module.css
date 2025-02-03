@@ -1,0 +1,71 @@
+.signupContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f0f0f; /* Dark background */
+    border-radius: 16px; /* Add curviness */
+  }
+  
+  .signupForm {
+    background-color: #181818; /* Dark form background */
+    padding: 40px;
+    border-radius: 16px; /* Add curviness */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+  }
+  
+  .signupForm h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff; /* Light text color */
+    border-radius: 16px; /* Add curviness */
+  }
+  
+  .signupForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #303030; /* Dark border */
+    border-radius: 16px; /* Add curviness */
+    font-size: 14px;
+    background-color: #202020; /* Dark input background */
+    color: #ffffff; /* Light text color */
+  }
+  
+  .signupForm input::placeholder {
+    color: #b3b3b3; /* Placeholder color */
+  }
+  
+  .signupForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #cc0000; /* Red button */
+    color: #ffffff; /* Light text color */
+    border: none;
+    border-radius: 16px; /* Add curviness */
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .signupForm button:hover {
+    background-color: #ff0000; /* Lighter red on hover */
+  }
+  
+  .signupForm p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #b3b3b3; /* Light text color */
+    border-radius: 16px; /* Add curviness */
+  }
+  
+  .signupForm a {
+    color: #cc0000; /* Red link color */
+    text-decoration: none;
+    border-radius: 16px; /* Add curviness */
+  }
+  
+  .signupForm a:hover {
+    text-decoration: underline;
+  }
