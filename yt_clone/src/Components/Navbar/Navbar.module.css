@@ -167,3 +167,44 @@
       flex: 0;
     }
   }
+  .authButton {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    padding: 8px 12px;
+    border: 1px solid #0f0f0f;
+    border-radius: 2px;
+    color: #0f0f0f;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .authButton:hover {
+    background-color: #e6f0ff;
+  }
+  
+  .authButton span {
+    margin-left: 8px;
+  }
+  
+  .logoutButton {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    padding: 8px 12px;
+    border: 1px solid #0f0f0f;
+    border-radius: 2px;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .logoutButton:hover {
+    background-color: #0f0f0f;
+  }
+  
+  .logoutButton span {
+    margin-left: 8px;
+  }

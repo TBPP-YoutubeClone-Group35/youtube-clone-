@@ -1,8 +1,21 @@
-import React from "react"
-import { Menu, Search, Mic, Plus, Bell } from "lucide-react"
+import React ,{useState} from "react"
+import { Menu, Search, Mic, Plus, Bell,LogOut } from "lucide-react"
 import styles from "./Navbar.module.css"
 
-const Navbar = ({ onMenuClick }) => {
+const Navbar = ({ onMenuClick,onLogout,onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState("")
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value)
+  }
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault()
+    if (onSearch) {
+      onSearch(searchQuery)
+    }
+    
+  }
   return (
     <nav className={styles.navbar}>
       <div className={styles.start}>
@@ -20,9 +33,9 @@ const Navbar = ({ onMenuClick }) => {
 
       <div className={styles.center}>
         <div className={styles.searchContainer}>
-          <form className={styles.searchForm}>
+          <form className={styles.searchForm} onSubmit={handleSearchSubmit}>
             <div className={styles.searchWrapper}>
-              <input type="text" placeholder="Search" className={styles.searchInput} />
+              <input type="text" placeholder="Search" className={styles.searchInput} value={searchQuery} onChange={handleSearchChange} />
             </div>
             <button type="submit" className={styles.searchButton}>
               <Search size={20} />
@@ -40,6 +53,10 @@ const Navbar = ({ onMenuClick }) => {
         </button>
         <button className={styles.iconButton}>
           <Bell size={20} />
+        </button>
+        <button className={styles.logoutButton} onClick={onLogout}>
+          <LogOut size={20} />
+          <span>Logout</span>
         </button>
         <button className={styles.avatarButton}>
           <div className={styles.avatar}></div>
