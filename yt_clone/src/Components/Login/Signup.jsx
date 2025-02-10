@@ -9,8 +9,7 @@ const Signup = ({ onSignup }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically validate the input and create a new account
-    // For this example, we'll just call onSignup
+
     onSignup()
   }
 

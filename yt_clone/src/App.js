@@ -12,7 +12,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => JSON.parse(localStorage.getItem("isAuthenticated")) || false
   );
-  const [searchQuery, setSearchQuery] = useState(""); // State to hold the search query
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   const toggleSidebar = () => {
     setIsSidebarExpanded(!isSidebarExpanded);

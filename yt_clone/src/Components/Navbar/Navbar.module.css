@@ -1,210 +1,210 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 56px;
-    padding: 0 16px;
-    background-color: #0f0f0f;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
-  
-  .start {
-    display: flex;
-    align-items: center;
-    min-width: 169px;
-  }
-  
-  .menuButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    padding: 8px;
-    margin-right: 8px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    height: 40px;
-    padding: 18px 14px 18px 16px;
-  }
-  
-  .logoImage {
-    height: 60px;
-    object-fit: contain;
-  }
-  
-  .center {
-    display: flex;
-    align-items: center;
-    flex: 0 1 732px;
-    min-width: 0;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  background-color: #0f0f0f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.start {
+  display: flex;
+  align-items: center;
+  min-width: 169px;
+}
+
+.menuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 18px 14px 18px 16px;
+}
+
+.logoImage {
+  height: 60px;
+  object-fit: contain;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex: 0 1 732px;
+  min-width: 0;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 auto;
+  padding: 0 16px;
+  max-width: 732px;
+}
+
+.searchForm {
+  display: flex;
+  flex: 1;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.searchWrapper {
+  display: flex;
+  flex: 1;
+  height: 40px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 100%;
+  padding: 0 4px 0 16px;
+  border: 1px solid #303030;
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  background: #121212;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #1c62b9;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 40px;
+  border: 1px solid #303030;
+  border-radius: 0 20px 20px 0;
+  background: #222222;
+  cursor: pointer;
+  color: #888;
+}
+
+.micButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 50%;
+  background: #181818;
+  color: white;
+  cursor: pointer;
+}
+
+.end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 225px;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.avatarButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 8px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+@media (max-width: 656px) {
   .searchContainer {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    margin: 0 auto;
-    padding: 0 16px;
-    max-width: 732px;
+    display: none;
   }
-  
-  .searchForm {
-    display: flex;
-    flex: 1;
-    max-width: 640px;
-    margin: 0 auto;
+
+  .center {
+    flex: 0;
   }
-  
-  .searchWrapper {
-    display: flex;
-    flex: 1;
-    height: 40px;
-  }
-  
-  .searchInput {
-    width: 100%;
-    height: 100%;
-    padding: 0 4px 0 16px;
-    border: 1px solid #303030;
-    border-right: none;
-    border-radius: 20px 0 0 20px;
-    background: #121212;
-    color: white;
-    font-size: 16px;
-    outline: none;
-  }
-  
-  .searchInput:focus {
-    border-color: #1c62b9;
-  }
-  
-  .searchButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 64px;
-    height: 40px;
-    border: 1px solid #303030;
-    border-radius: 0 20px 20px 0;
-    background: #222222;
-    cursor: pointer;
-    color: #888;
-  }
-  
-  .micButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    margin-left: 8px;
-    border: none;
-    border-radius: 50%;
-    background: #181818;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .end {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    min-width: 225px;
-  }
-  
-  .iconButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    margin: 0 8px;
-    padding: 8px;
-    border: none;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .avatarButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    margin: 0 8px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-  }
-  
-  .avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: #888;
-  }
-  
-  @media (max-width: 656px) {
-    .searchContainer {
-      display: none;
-    }
-  
-    .center {
-      flex: 0;
-    }
-  }
-  .authButton {
-    display: flex;
-    align-items: center;
-    margin-right: 16px;
-    padding: 8px 12px;
-    border: 1px solid #0f0f0f;
-    border-radius: 2px;
-    color: #0f0f0f;
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .authButton:hover {
-    background-color: #e6f0ff;
-  }
-  
-  .authButton span {
-    margin-left: 8px;
-  }
-  
-  .logoutButton {
-    display: flex;
-    align-items: center;
-    margin-left: 16px;
-    padding: 8px 12px;
-    border: 1px solid #0f0f0f;
-    border-radius: 2px;
-    background-color: #0f0f0f;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    cursor: pointer;
-  }
-  
-  .logoutButton:hover {
-    background-color: #0f0f0f;
-  }
-  
-  .logoutButton span {
-    margin-left: 8px;
-  }
+}
+.authButton {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  padding: 8px 12px;
+  border: 1px solid #0f0f0f;
+  border-radius: 2px;
+  color: #0f0f0f;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.authButton:hover {
+  background-color: #e6f0ff;
+}
+
+.authButton span {
+  margin-left: 8px;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+  padding: 8px 12px;
+  border: 1px solid #0f0f0f;
+  border-radius: 2px;
+  background-color: #0f0f0f;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #0f0f0f;
+}
+
+.logoutButton span {
+  margin-left: 8px;
+}

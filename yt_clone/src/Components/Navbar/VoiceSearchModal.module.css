@@ -1,0 +1,74 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 80%;
+    max-width: 600px;
+    gap: 24px;
+  }
+  
+  .title {
+    color: white;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .micWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .micButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cc0000;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .micButton.listening {
+    transform: scale(1.1);
+    background-color: #ff0000;
+  }
+  
+  .micButton svg {
+    width: 50px;
+    height: 50px;
+  }
