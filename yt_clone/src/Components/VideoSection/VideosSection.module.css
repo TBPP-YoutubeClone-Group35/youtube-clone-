@@ -4,6 +4,7 @@
   align-items: center;
 }
 
+
 .videoPlayerContainer {
   display: flex;
   flex-direction: column;
@@ -11,27 +12,30 @@
   position: relative; 
 }
 
+
 .videoPlayerHeader {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px; 
 }
+
 
 .closeButton {
   cursor: pointer;
-  background-color: #ff6b6b;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  font-size: 16px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  background-color: transparent;
+  color: grey; 
+  border: none; 
+  font-size: 20px; 
+  font-weight: bold; 
+  margin: 8px; 
+  transition: color 0.3s ease; 
 }
 
 .closeButton:hover {
-  background-color: #ff4a4a;
+  color: grey; 
 }
+
 
 .videoPlayer {
   width: 1000px; 
@@ -54,6 +58,7 @@
   padding: 24px;
 }
 
+
 .videoCard {
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -63,10 +68,12 @@
   transform: scale(1.05);
 }
 
+
 .thumbnail {
   width: 100%;
   border-radius: 8px;
 }
+
 
 .videoInfo {
   padding: 8px 0;

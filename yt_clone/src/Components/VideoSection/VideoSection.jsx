@@ -38,7 +38,7 @@ const VideoSection = ({ query = "programming" }) => {
   };
 
   const handleBackClick = () => {
-    setCurrentVideoId(null); // Reset video
+    setCurrentVideoId(null); 
   };
 
   if (loading) {
@@ -59,6 +59,7 @@ const VideoSection = ({ query = "programming" }) => {
         {currentVideoId && (
           <div className={styles.videoPlayerContainer}>
             <div className={styles.videoPlayerHeader}>
+              {/* Cross back button */}
               <button
                 className={styles.closeButton}
                 onClick={handleBackClick}
