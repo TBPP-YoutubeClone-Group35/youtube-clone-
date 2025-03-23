@@ -1,16 +1,62 @@
-.videoSection {
+.videoPlayerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoPlayerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; 
+}
+
+.videoPlayerHeader {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 800px;
+}
+
+.closeButton {
+  cursor: pointer;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.closeButton:hover {
+  background-color: #ff4a4a;
+}
+
+.videoPlayer {
+  width: 1000px; 
+  height: 600px; 
+  margin-bottom: 24px; 
+}
+
+.iframe {
+  width: 100%; 
+  height: 100%; 
+  border-radius: 12px; 
+}
+
+
+.videoGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 16px;
+  width: 100%;
   padding: 24px;
 }
 
 .videoCard {
   cursor: pointer;
-  background-color: #1e1e1e;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease;
 }
 
 .videoCard:hover {
@@ -19,46 +65,24 @@
 
 .thumbnail {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  border-radius: 8px;
 }
 
 .videoInfo {
-  padding: 12px;
+  padding: 8px 0;
 }
 
 .videoTitle {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 8px;
-  color: #fff;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .channelTitle {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 4px;
+  font-size: 14px;
+  color: #555;
 }
 
 .videoMeta {
   font-size: 12px;
-  color: #aaa;
-}
-
-.loading,
-.noVideos,
-.error {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 20px;
-  font-size: 18px;
-  color: #aaa;
-}
-
-.error {
-  color: #ff6b6b;
+  color: #888;
 }
