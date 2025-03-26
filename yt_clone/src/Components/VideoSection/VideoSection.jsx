@@ -59,12 +59,13 @@ const VideoSection = ({ query = "programming" }) => {
         {currentVideoId && (
           <div className={styles.videoPlayerContainer}>
             <div className={styles.videoPlayerHeader}>
-              {/* Cross back button */}
+              {/* Back button with arrow */}
               <button
-                className={styles.closeButton}
+                className={styles.backButton}
                 onClick={handleBackClick}
+                aria-label="Go back"
               >
-                X
+                ← Back
               </button>
             </div>
             <div className={styles.videoPlayer}>
