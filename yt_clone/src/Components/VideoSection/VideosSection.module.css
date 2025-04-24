@@ -1,55 +1,53 @@
-.videoPlayerWrapper {
+/* Full-page styling for the video section */
+.videoSection {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-
-.videoPlayerContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative; 
-}
-
-
-.videoPlayerHeader {
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
-  max-width: 1000px; 
+  padding: 24px;
+  background-color: #000; /* Set black background */
 }
 
-
-.closeButton {
-  cursor: pointer;
-  background-color: transparent;
-  color: grey; 
-  border: none; 
-  font-size: 20px; 
-  font-weight: bold; 
-  margin: 8px; 
-  transition: color 0.3s ease; 
-}
-
-.closeButton:hover {
-  color: grey; 
-}
-
-
-.videoPlayer {
-  width: 800px; 
-  height: 500px; 
+/* Container for the video player with black sides */
+.playerContainer {
+  width: 100%;
+  background-color: #0f0f0f; 
+  display: flex;
+  justify-content: center;
+  padding: 32px 0;
   margin-bottom: 24px; 
 }
 
-.iframe {
-  width: 100%; 
-  height: 100%; 
-  border-radius: 12px; 
+/* Styling for the YouTube player iframe */
+.youtubePlayer {
+  width: 100%;
+  max-width: 800px; /* Center the player and limit its size */
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #333; /* Optional border for better visibility */
 }
 
+/* Back button styling */
+.backButton {
+  margin-top: 2px;
+  margin-bottom: 320px;
+  padding: 3px 6px; /* Minimal padding for a smaller button */
+  font-size: 12px; /* Smaller font size */
+  font-weight: 500;
+  color: white;
+  background-color: #ff5252;
+  border: none;
+  border-radius: 4px; /* Smaller border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
 
+.backButton:hover {
+  background-color: #db5858; /* Darker red for hover */
+}
+
+/* Grid for video cards */
 .videoGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -58,38 +56,62 @@
   padding: 24px;
 }
 
-
+/* Video card styles */
 .videoCard {
   cursor: pointer;
-  transition: transform 0.2s ease;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
 }
 
 .videoCard:hover {
   transform: scale(1.05);
 }
 
-
 .thumbnail {
   width: 100%;
-  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
-
 .videoInfo {
-  padding: 8px 0;
+  padding: 12px;
 }
 
 .videoTitle {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .channelTitle {
-  font-size: 14px;
-  color: #555;
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 4px;
 }
 
 .videoMeta {
   font-size: 12px;
-  color: #888;
+  color: #aaa;
+}
+
+/* Loader, error, and empty state styling */
+.loading,
+.noVideos,
+.error {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #aaa;
+}
+
+.error {
+  color: #ff6b6b;
 }

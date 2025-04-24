@@ -1,10 +1,11 @@
-import React, { useState, useEffect ,call } from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import VideoSection from "./Components/VideoSection/VideoSection";
 import Login from "./Components/Login/Login";
 import Signup from "./Components/Login/Signup";
+import Shorts from "./Components/Shorts/Shorts";
 import "./App.css";
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(
     () => JSON.parse(localStorage.getItem("isAuthenticated")) || false
   );
-  const [searchQuery, setSearchQuery] = useState(""); 
+  const [searchQuery, setSearchQuery] = useState(""); // State to track search query
 
   const toggleSidebar = () => {
     setIsSidebarExpanded(!isSidebarExpanded);
@@ -48,20 +49,22 @@ function App() {
         <Navbar
           onMenuClick={toggleSidebar}
           onLogout={handleLogout}
-          onSearch={handleSearch} // Pass the handleSearch function as a prop
+          onSearch={handleSearch} // Pass handleSearch to Navbar
         />
       )}
       <div className="container">
         {isAuthenticated && <Sidebar isExpanded={isSidebarExpanded} />}
         <main
-          className={`main-content ${isAuthenticated && isSidebarExpanded ? "sidebar-expanded" : ""}`}
+          className={`main-content ${
+            isAuthenticated && isSidebarExpanded ? "sidebar-expanded" : ""
+          }`}
         >
           <Routes>
             <Route
               path="/"
               element={
                 isAuthenticated ? (
-                  <VideoSection query={searchQuery} /> // Pass the search query to VideoSection
+                  <VideoSection query={searchQuery} /> // Pass searchQuery to VideoSection
                 ) : (
                   <Navigate to="/login" replace />
                 )
@@ -79,6 +82,7 @@ function App() {
                 isAuthenticated ? <Navigate to="/" replace /> : <Signup onSignup={handleSignup} />
               }
             />
+            <Route path="/shorts" element={<Shorts />} />
           </Routes>
         </main>
       </div>

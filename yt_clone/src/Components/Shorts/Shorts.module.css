@@ -1,0 +1,105 @@
+.shortsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f0f0f;
+    padding: 16px;
+    min-height: 100vh;
+  }
+  
+  .shortsContainer h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .shortsContainer p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .loading,
+  .error,
+  .noShorts {
+    font-size: 18px;
+    color: #606060;
+    margin-top: 20px;
+  }
+  
+  .playerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .backButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .shortsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  .shortCard {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .shortCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  .shortInfo {
+    padding: 8px;
+  }
+  
+  .shortTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #202020;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .channelTitle {
+    font-size: 12px;
+    color: #606060;
+    margin: 4px 0 0;
+  }
+  
+  .shortMeta {
+    font-size: 12px;
+    color: #909090;
+    margin: 4px 0 0;
+  }

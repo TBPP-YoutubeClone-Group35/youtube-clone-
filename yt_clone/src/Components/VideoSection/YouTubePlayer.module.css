@@ -1,0 +1,15 @@
+/* Add this CSS in YouTubePlayer.module.css */
+#youtube-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1rem; /* Add padding */
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
