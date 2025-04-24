@@ -49,38 +49,52 @@ const VideoSection = ({ query = "programming" }) => {
 
   return (
     <div className={styles.videoSection}>
-      {selectedVideoId && ( // Render YouTubePlayer if a video is selected
-        <div className={styles.playerContainer}>
-          <YouTubePlayer videoId={selectedVideoId} />
-          <button
-            className={styles.backButton}
-            onClick={() => setSelectedVideoId(null)} // Deselect video
-          >
-            <X /> {/* Use X icon */}
-          </button>
-        </div>
-      )}
-      <div className={styles.videoGrid}>
-        {videos.map((video) => (
-          <div
-            key={video.id.videoId}
-            className={styles.videoCard}
-            onClick={() => setSelectedVideoId(video.id.videoId)} // Set selected video ID on click
-          >
-            <img
-              src={video.snippet.thumbnails.medium.url || "/placeholder.svg"}
-              alt={video.snippet.title}
-              className={styles.thumbnail}
-            />
-            <div className={styles.videoInfo}>
-              <h3 className={styles.videoTitle}>{video.snippet.title}</h3>
-              <p className={styles.channelTitle}>{video.snippet.channelTitle}</p>
-              <p className={styles.videoMeta}>
-                {new Date(video.snippet.publishTime).toLocaleDateString()}
-              </p>
+      <div className={styles.videoPlayerWrapper}>
+        {currentVideoId && (
+          <div className={styles.videoPlayerContainer}>
+            <div className={styles.videoPlayerHeader}>
+              {/* Cross back button */}
+              <button
+                className={styles.closeButton}
+                onClick={handleBackClick}
+              >
+                X
+              </button>
+            </div>
+            <div className={styles.videoPlayer}>
+              <iframe
+                title="YouTube Video Player"
+                src={`https://www.youtube.com/embed/${currentVideoId}`}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className={styles.iframe}
+              ></iframe>
             </div>
           </div>
-        ))}
+        )}
+        <div className={styles.videoGrid}>
+          {videos.map((video) => (
+            <div
+              key={video.id.videoId}
+              className={styles.videoCard}
+              onClick={() => handleVideoClick(video.id.videoId)}
+            >
+              <img
+                src={video.snippet.thumbnails.medium.url || "/placeholder.svg"}
+                alt={video.snippet.title}
+                className={styles.thumbnail}
+              />
+              <div className={styles.videoInfo}>
+                <h3 className={styles.videoTitle}>{video.snippet.title}</h3>
+                <p className={styles.channelTitle}>{video.snippet.channelTitle}</p>
+                <p className={styles.videoMeta}>
+                  {new Date(video.snippet.publishTime).toLocaleDateString()}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
